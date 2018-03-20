@@ -1,0 +1,70 @@
+@import "../../_theme_variables";
+
+#languages-block-top {
+	position: relative;												
+	span.firstWord {
+		display: none;
+	}
+	div.current {
+		font-weight: 300;
+		padding:8px 0;
+		cursor: pointer;
+		font-size: 14px;
+		line-height:24px;
+		@include transition (all 0.3s ease);
+		strong {
+			@include transition (all 0.3s ease);
+			font-weight:300;
+		}
+		&:after {
+			@include transition (all 0.3s ease);
+			content: "\e071";
+			font-family: $flat-icon;
+			font-size: 24px;
+			line-height:24px;
+			color: #aeaeae;
+			display:block;
+			float:right;
+			padding-top:1px;
+		}
+		&.active {
+			&:after {
+				content: "\e073";
+			}
+		}
+		&:hover {
+			color: #000;
+			strong,
+			&:after {
+				color: #000;
+			}
+		}		
+		.cur-label {
+			// max 479px
+			@media (max-width: $screen-xs - 1) {
+				display: none;
+			}
+		}
+	}
+	ul {
+		display: none;
+		width: 100%;
+		background: #777;
+		z-index: 2;
+		margin:0;
+		li {
+			color: $light-text-color;
+			line-height: 35px;
+			font-size: 13px;
+			a,
+			> span {
+				padding: 0 10px 0 12px;
+				display: block;
+				color: $light-text-color;
+			}
+			&.selected, &:hover a {
+				background: #999;
+			}
+		}
+	}
+}

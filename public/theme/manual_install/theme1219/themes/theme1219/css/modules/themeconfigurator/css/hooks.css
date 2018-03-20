@@ -1,0 +1,114 @@
+/* Top hook CSS */
+#htmlcontent_top ul {
+  margin: 0 -5px; }
+  #htmlcontent_top ul li {
+    padding: 10px 5px 0; }
+    #htmlcontent_top ul li .bannerBox {
+      position: relative;
+      display: block; }
+    #htmlcontent_top ul li img {
+      max-width: 100%;
+      height: auto;
+      -moz-transition: 0.3s;
+      -o-transition: 0.3s;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
+    #htmlcontent_top ul li a {
+      display: block;
+      overflow: hidden; }
+      #htmlcontent_top ul li a:hover img {
+        opacity: 0.8; }
+    #htmlcontent_top ul li .item-html {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      color: #2b414e; }
+      #htmlcontent_top ul li .item-html:after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%; }
+      #htmlcontent_top ul li .item-html h2 {
+        font: bold 35px/45px "Ubuntu", sans-serif;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 22px; }
+        #htmlcontent_top ul li .item-html h2 span {
+          font: 300 13px/33px "Ubuntu", sans-serif;
+          letter-spacing: 0.32em;
+          display: block; }
+@media (min-width: 480px) and (max-width: 987px) {
+  #htmlcontent_top ul li .item-html h2 {
+    font: bold 22px/30px "Ubuntu", sans-serif;
+    margin: 0; }
+    #htmlcontent_top ul li .item-html h2 span {
+      font: 300 12px/24px "Ubuntu", sans-serif; } }
+@media (max-width: 479px) {
+  #htmlcontent_top ul li {
+    width: 100%; } }
+
+/* Home hook CSS */
+#htmlcontent_home {
+  border-bottom: 10px solid #fff; }
+  #htmlcontent_home ul {
+    margin-bottom: 0; }
+    #htmlcontent_home ul li a:hover button {
+      background: none;
+      color: #fff; }
+    #htmlcontent_home ul li .item-html {
+      text-align: center;
+      text-transform: uppercase;
+      color: #fff;
+      font: 300 36px/45px "Ubuntu", sans-serif;
+      letter-spacing: 0.4em;
+      padding: 193px 0 215px; }
+      #htmlcontent_home ul li .item-html h2 {
+        font: bold 75px/1em "Ubuntu", sans-serif;
+        letter-spacing: 0;
+        margin: 0 0 21px; }
+      #htmlcontent_home ul li .item-html button {
+        border: 3px solid #fff;
+        background: #fff;
+        color: #333;
+        padding: 20px 30px;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        font: 500 35px/1em "Ubuntu", sans-serif;
+        margin-top: 20px;
+        -moz-transition: 0.3s;
+        -o-transition: 0.3s;
+        -webkit-transition: 0.3s;
+        transition: 0.3s; }
+  @media (min-width: 480px) and (max-width: 987px) {
+    #htmlcontent_home {
+      border: none; }
+      #htmlcontent_home ul li .item-html {
+        font: 300 26px/35px "Ubuntu", sans-serif;
+        padding: 93px 0 115px; }
+        #htmlcontent_home ul li .item-html h2 {
+          font: bold 45px/1em "Ubuntu", sans-serif;
+          margin: 0 0 11px; }
+        #htmlcontent_home ul li .item-html button {
+          padding: 10px 20px;
+          font: 500 25px/1em "Ubuntu", sans-serif;
+          margin-top: 10px; } }
+  @media (max-width: 479px) {
+    #htmlcontent_home {
+      border: none; }
+      #htmlcontent_home ul li .item-html {
+        font: 300 20px/30px "Ubuntu", sans-serif;
+        padding: 73px 0 65px; }
+        #htmlcontent_home ul li .item-html h2 {
+          font: bold 22px/1em "Ubuntu", sans-serif;
+          margin: 0 0 11px; }
+        #htmlcontent_home ul li .item-html button {
+          padding: 10px 10px;
+          font: 500 14px/1em "Ubuntu", sans-serif;
+          margin-top: 10px; } }
+
+/* Left hook CSS */
+/* Right hook CSS */
+/* Footer hook CSS */

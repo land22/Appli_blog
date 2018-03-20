@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>tmsociallogin</name>
+	<displayName><![CDATA[Tm Social Login]]></displayName>
+	<version><![CDATA[1.0.0]]></version>
+	<description><![CDATA[Tm Social Login module]]></description>
+	<author><![CDATA[Template Monster (Alexander Grosul)]]></author>
+	<tab><![CDATA[front_office_features]]></tab>
+	<confirmUninstall><![CDATA[Are you sure that you want to delete all of your API's?]]></confirmUninstall>
+	<is_configurable>1</is_configurable>
+	<need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

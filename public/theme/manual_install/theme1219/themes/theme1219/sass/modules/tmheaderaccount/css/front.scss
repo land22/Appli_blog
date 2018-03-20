@@ -1,0 +1,222 @@
+@import "../../../_theme_variables";
+
+#header-login {
+	position:relative;
+	border-bottom:1px solid #fff;
+	@include transition (all 0.25s ease);
+	@media (max-width: $screen-xs-max) { // max 767px
+		border:none;
+		margin-bottom:1px;
+		background: #e9e9e9;
+	}
+	&:hover {
+		background: #f0f0f0;
+	}			
+	.header_user_info {
+		&.currentBox {
+			&:after {
+				content:" ";
+				position:absolute;
+				left:0;
+				top:0;
+				display:block;
+				height:100%;
+				@include transition(all 0s ease);
+			}
+			a {
+				background: none;
+				display: block;
+				height:100px;
+				width:100%;
+				border: none;
+				text-align: center;
+				line-height:100px;
+				color:#bdbdbd;
+				padding:0;
+				@media (max-width: $screen-xs-max) { // max 767px
+					height:65px;
+					line-height:65px;
+				}
+				span {
+					display: none;
+				}
+				&:before {
+					content: "\e18b";
+					font-family: $flat-icon;
+					font-size: 31px;
+					@include transition(all 0.1s ease);
+				}
+			}
+			&.account a {
+				&:before {
+					content: "\e18b";
+				}
+			}
+			&.active {
+				&:after {
+					left:-1px;
+					@include transition(all 1s ease);
+				}
+				a:before {
+					 font-size:41px; color:#58bdab;
+				}
+				+ #header-login-content {
+					animation: 0.4s ease-in-out 0s normal none 1 moveFromLeft;
+					-webkit-animation: 0.4s ease-in-out 0s normal none 1 moveFromLeft;
+				}
+			}
+		}
+	}
+	.logout {
+		width:100%;
+		button, a {
+			display:block;
+			float:none;
+			font-size:21px;
+			height:50px;
+			padding-top:12px;
+			background:#262626;
+			color:#888;
+			border:none;
+			text-align:center;
+			&:hover {
+				color:#fff;	
+			}
+			&:before {
+				content: "\e186";
+				font-family: $flat-icon;
+			}
+			span {
+				display:none;	
+			}
+		}
+	}	
+}
+
+
+#header-login-content {
+	display:none;
+	width:264px;
+	padding:19px 29px 20px 31px;
+	margin:0;
+	position:absolute;
+	right:100%;
+	top:0;
+	z-index:1;
+	background: #f8f8f8;
+	color:#fff;
+	margin-right:1px;
+	@media (max-width: $screen-xs-max) { // max 767px
+		width:255px;
+		padding:14px 10px 17px 12px;
+	}
+	label {
+		color:#fff;	
+	}
+	li {
+		margin:0;
+		padding:0;
+		#header_login_form {
+			.form-group {
+				margin-bottom:11px;	
+			}
+			.account_input {
+				height:50px;
+				border:none;
+				border-bottom:1px solid #fff;
+				background:none;
+				padding:14px 0;
+				font-size:14px;
+			}
+		}
+		.form_content {
+			p {
+				width:50%;
+				float:left;
+				padding-top:19px;
+				button, a {
+					display:block;
+					float:none;
+					font-size:21px;
+					height:50px;
+					background:#58bdab;
+					color:#fff;	
+					border:none;
+					text-align:center;
+					width:100%;
+					&:hover {
+						color:#2b414e;
+					}
+					&:before {
+						content: "\e0d0";
+						font-family: $flat-icon;
+					}
+					span {
+						display:none;	
+					}
+				}
+				a {
+					margin-left:1px;
+					font-size:22px;
+					padding-top:12px;
+					&:before {
+						content: "\e006";
+					}	
+				}
+			}
+		}
+		ul {
+			margin:0 0 10px 0;
+			li {
+				display:block;
+				border-top:1px solid #515151;
+				font-size:14px;
+				line-height:18px;
+				&:first-child {border:none;}
+				a {
+					color:#888;
+					padding: 7px 10px;
+					display:block;
+					&:hover {
+						color:#1c1c1c;
+					}
+					i {display:none;}
+				}
+			}
+		}
+	}
+}
+#create_header_account_error {
+	padding:8px;	
+}
+
+@-webkit-keyframes moveFromLeft{
+    from {
+        -webkit-transform: translateX(-100%);
+		@include opacity(0)
+    }
+    to {
+        -webkit-transform: translateX(0%);
+				@include opacity(1)
+    }
+}
+@-moz-keyframes moveFromLeft{
+    from {
+        -moz-transform: translateX(-100%);
+				@include opacity(0)
+    }
+    to {
+        -moz-transform: translateX(0%);
+				@include opacity(1)
+    }
+}
+@-ms-keyframes moveFromLeft{
+    from {
+        -ms-transform: translateX(-100%);
+				@include opacity(0)
+    }
+    to {
+        -ms-transform: translateX(0%);
+				@include opacity(1)
+    }
+}

@@ -1,0 +1,82 @@
+.blog-image {
+  margin-bottom: 15px; }
+  .blog-image a {
+    display: block;
+    overflow: hidden; }
+    .blog-image a img {
+      -moz-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      -webkit-transform: scale(1, 1);
+      transform: scale(1, 1);
+      -moz-transition: 15s;
+      -o-transition: 15s;
+      -webkit-transition: 15s;
+      transition: 15s; }
+      @media only screen and (max-width: 987px) {
+        .blog-image a img {
+          width: 100%; } }
+
+#homepage-blog {
+  margin-bottom: 27px; }
+  #homepage-blog .title_block {
+    display: none; }
+    #homepage-blog .title_block:after {
+      display: none; }
+  @media (min-width: 480px) and (max-width: 1211px) {
+    #homepage-blog {
+      margin: 0 -3px 20px;
+      text-align: center; } }
+  #homepage-blog li {
+    margin-bottom: 30px;
+    text-align: center; }
+    #homepage-blog li:hover a img {
+      -moz-transform: scale(1.2, 1.2);
+      -ms-transform: scale(1.2, 1.2);
+      -webkit-transform: scale(1.2, 1.2);
+      transform: scale(1.2, 1.2); }
+    #homepage-blog li h5 {
+      font: bold 16px/31px "Ubuntu", sans-serif;
+      padding: 0 10px;
+      margin: 21px 0 5px; }
+      @media (min-width: 988px) and (max-width: 1211px) {
+        #homepage-blog li h5 {
+          font: bold 14px/26px "Ubuntu", sans-serif; } }
+      #homepage-blog li h5 a {
+        color: #58bdab; }
+        #homepage-blog li h5 a:hover {
+          color: #fff; }
+    #homepage-blog li p {
+      color: #fff;
+      padding: 0 10px; }
+      @media (min-width: 988px) and (max-width: 1211px) {
+        #homepage-blog li p {
+          padding: 0;
+          font-size: 11px;
+          line-height: 15px; } }
+    #homepage-blog li .date-added {
+      color: #fff;
+      font-size: 14px; }
+      #homepage-blog li .date-added:before {
+        font-family: "material-design";
+        display: inline-block;
+        content: "\e053";
+        margin-right: 5px;
+        color: #58bdab; }
+  @media (min-width: 480px) and (max-width: 1211px) {
+    #homepage-blog {
+      margin: 0 -3px 20px;
+      text-align: center; }
+      #homepage-blog li {
+        width: 30%;
+        display: inline-block;
+        float: none;
+        padding: 0 3px; }
+        #homepage-blog li h5 {
+          font: 500 13px/20px "Ubuntu", sans-serif;
+          padding: 0;
+          margin: 15px 0 5px; }
+        #homepage-blog li p {
+          display: none; }
+        #homepage-blog li .date-added {
+          color: #fff;
+          font-size: 12px; } }

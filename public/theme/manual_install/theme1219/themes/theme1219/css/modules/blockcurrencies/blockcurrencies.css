@@ -1,0 +1,165 @@
+.currency_language {
+  position: relative;
+  border-bottom: 1px solid #fff;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease; }
+  .currency_language:hover {
+    background: #f0f0f0; }
+  @media (max-width: 987px) {
+    .currency_language {
+      border: none;
+      background: #e9e9e9; } }
+  .currency_language .toogle_content_box {
+    display: none;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    margin-right: 1px;
+    width: 264px;
+    background: #f8f8f8;
+    padding: 14px 37px 17px 39px; }
+    @media (max-width: 987px) {
+      .currency_language .toogle_content_box {
+        width: 255px;
+        padding: 14px 17px 17px 19px; } }
+  .currency_language .currentBox {
+    background: none;
+    display: block;
+    height: 100px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    line-height: 100px;
+    color: #bdbdbd;
+    padding: 0;
+    cursor: pointer; }
+    .currency_language .currentBox:after {
+      content: " ";
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      height: 100%;
+      -moz-transition: all 0s ease;
+      -o-transition: all 0s ease;
+      -webkit-transition: all 0s ease;
+      transition: all 0s ease; }
+    @media (max-width: 987px) {
+      .currency_language .currentBox {
+        height: 65px;
+        line-height: 65px; } }
+    .currency_language .currentBox span {
+      display: none; }
+    .currency_language .currentBox:before {
+      content: "\e147";
+      font-family: "material-design";
+      font-size: 31px;
+      -moz-transition: all 0.1s ease;
+      -o-transition: all 0.1s ease;
+      -webkit-transition: all 0.1s ease;
+      transition: all 0.1s ease; }
+    .currency_language .currentBox.active:after {
+      left: -1px;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease; }
+    .currency_language .currentBox.active:before {
+      font-size: 41px;
+      color: #58bdab; }
+    .currency_language .currentBox.active + .toogle_content_box {
+      animation: 0.4s ease-in-out 0s normal none 1 moveFromLeft;
+      -webkit-animation: 0.4s ease-in-out 0s normal none 1 moveFromLeft; }
+
+#currencies-block-top {
+  position: relative; }
+  #currencies-block-top span.firstWord {
+    display: none; }
+  #currencies-block-top div.current {
+    font-weight: 300;
+    padding: 8px 0;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 24px;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    #currencies-block-top div.current strong {
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      font-weight: 300; }
+    #currencies-block-top div.current:after {
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      content: "\e071";
+      font-family: "material-design";
+      font-size: 24px;
+      line-height: 24px;
+      color: #aeaeae;
+      display: block;
+      float: right;
+      padding-top: 1px; }
+    #currencies-block-top div.current.active:after {
+      content: "\e073"; }
+    #currencies-block-top div.current:hover {
+      color: #000; }
+      #currencies-block-top div.current:hover strong, #currencies-block-top div.current:hover:after {
+        color: #000; }
+    @media (max-width: 479px) {
+      #currencies-block-top div.current .cur-label {
+        display: none; } }
+  #currencies-block-top ul {
+    display: none;
+    width: 100%;
+    background: #777;
+    z-index: 2;
+    margin: 0; }
+    #currencies-block-top ul li {
+      color: white;
+      line-height: 35px;
+      font-size: 13px; }
+      #currencies-block-top ul li a,
+      #currencies-block-top ul li > span {
+        padding: 0 10px 0 12px;
+        display: block;
+        color: white; }
+      #currencies-block-top ul li.selected, #currencies-block-top ul li:hover a {
+        background: #999; }
+
+@-webkit-keyframes moveFromLeft {
+  from {
+    -webkit-transform: translateX(-100%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  to {
+    -webkit-transform: translateX(0%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1; } }
+@-moz-keyframes moveFromLeft {
+  from {
+    -moz-transform: translateX(-100%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  to {
+    -moz-transform: translateX(0%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1; } }
+@-ms-keyframes moveFromLeft {
+  from {
+    -ms-transform: translateX(-100%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  to {
+    -ms-transform: translateX(0%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1; } }

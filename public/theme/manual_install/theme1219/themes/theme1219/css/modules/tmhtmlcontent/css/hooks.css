@@ -1,0 +1,27 @@
+#tmhtmlcontent_home ul {
+  margin-bottom: 0; }
+  #tmhtmlcontent_home ul li {
+    padding: 71px 15px 42px;
+    text-align: center; }
+    #tmhtmlcontent_home ul li img {
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      display: inline-block; }
+    #tmhtmlcontent_home ul li .item-html {
+      color: #fff;
+      padding: 0 50px; }
+      #tmhtmlcontent_home ul li .item-html h2 {
+        font: normal 45px/1em "Ubuntu", sans-serif;
+        margin: 19px 0 28px;
+        padding: 0;
+        color: #58bdab;
+        font-weight: 700; }
+@media (max-width: 987px) {
+  #tmhtmlcontent_home ul li .item-html {
+    padding: 0 30px; } }
+@media (max-width: 479px) {
+  #tmhtmlcontent_home ul li .item-html {
+    padding: 0;
+    font-size: 10px;
+    line-height: 18px; } }

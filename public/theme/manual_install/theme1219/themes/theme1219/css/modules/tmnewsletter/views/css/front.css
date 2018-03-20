@@ -1,0 +1,106 @@
+.newsletter-overlay {
+  background: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 9999;
+  overflow: hidden; }
+
+.newsletter-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 9999;
+  overflow: hidden; }
+
+#newsletter_popup {
+  background: #fff;
+  border: 2px solid #262626;
+  margin: 0 auto;
+  max-width: 575px;
+  min-width: 300px;
+  width: 90%;
+  position: relative;
+  margin: 275px auto; }
+  @media only screen and (max-width: 767px) {
+    #newsletter_popup {
+      margin: 5px auto; } }
+
+.tmnewsletter-inner {
+  position: relative; }
+
+.tmnewsletter-header {
+  padding: 86px 75px 4px; }
+  @media only screen and (max-width: 767px) {
+    .tmnewsletter-header {
+      padding: 56px 15px 4px; } }
+
+.tmnewsletter-header h4 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 35px;
+  font-weight: bold;
+  text-align: center;
+  color: #58bdab; }
+  @media only screen and (max-width: 767px) {
+    .tmnewsletter-header h4 {
+      font-size: 20px;
+      line-height: 30px; } }
+
+.tmnewsletter-content {
+  padding: 10px 75px 15px;
+  text-align: center; }
+  @media only screen and (max-width: 767px) {
+    .tmnewsletter-content {
+      padding: 10px 15px 15px;
+      font-size: 11px;
+      line-height: 15px; } }
+  .tmnewsletter-content input {
+    height: 50px;
+    padding: 10px 20px;
+    line-height: 20px;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #ccc; }
+  .tmnewsletter-content label {
+    display: none; }
+
+.tmnewsletter-footer {
+  text-align: center;
+  padding: 10px 15px 91px;
+  overflow: hidden; }
+  @media only screen and (max-width: 767px) {
+    .tmnewsletter-footer {
+      padding: 10px 15px 31px; } }
+
+.tmnewsletter-footer .btn {
+  margin-left: 5px;
+  margin-bottom: 10px;
+  padding: 10px 26px; }
+  .tmnewsletter-footer .btn.tmnewsletter-close {
+    display: none; }
+
+.tmnewsletter-footer .checkbox {
+  float: left; }
+
+.tmnewsletter-submit:hover {
+  background: #fff;
+  color: #000; }
+
+.icon.tmnewsletter-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  text-align: center;
+  color: #262626;
+  font-size: 31px; }
+
+.icon.tmnewsletter-close:before {
+  content: '\e054';
+  font-family: "material-design"; }

@@ -1,0 +1,16 @@
+ul.product_list .product-image-container .product_img_link {
+	position:relative;
+	z-index:0;
+}
+ul.product_list .product-image-container .product_img_link img {
+	position:relative;
+	z-index:1	
+}
+ul.product_list .product-image-container .product_img_link img + img {
+	position:absolute;
+	left:0;
+	top:0;
+	padding:9px;
+	z-index:0;
+	opacity:0;
+}

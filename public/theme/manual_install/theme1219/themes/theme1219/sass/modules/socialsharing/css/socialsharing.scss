@@ -1,0 +1,69 @@
+/* -------*--------------------------------------------------------------------------------------------------------
+										 Social Sharing 
+------------------------------------------------------------------------------------------------------------------- */
+
+.btn.btn-default.btn-facebook {
+	i {
+		color: white;
+		
+	}
+	
+	color: white;
+	border-color: #435f9f;
+	background-color: #435f9f;
+	&:hover {
+		background:none;
+		color: #435f9f;
+		i {
+			color: #435f9f;
+		}
+	}
+}
+
+.btn.btn-default.btn-twitter {
+	i {
+		color: white;
+	}
+	color: white;
+	border-color: #00aaf0;
+	background-color: #00aaf0;
+	&:hover {
+		background:none;
+		color: #00aaf0;
+		i {
+			color: #00aaf0;
+		}
+	}
+}
+
+.btn.btn-default.btn-google-plus {
+	i {
+		color: white;
+	}
+	color: white;
+	border-color: #e04b34;
+	background-color: #e04b34;
+	&:hover {
+		background:none;
+		color: #e04b34;
+		i {
+			color: #e04b34;
+		}
+	}
+}
+
+.btn.btn-default.btn-pinterest {
+	i {
+		color: white;
+	}
+	color: white;
+	border-color: #ce1f21;
+	background-color: #ce1f21;
+	&:hover {
+		background:none;
+		color: #ce1f21;
+		i {
+			color: #ce1f21;
+		}
+	}
+}
