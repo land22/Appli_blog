@@ -1,7 +1,7 @@
 <?php
 /**
  * 
- * @author camille
+ * @author landry
  *
  */
 class Post extends Manager

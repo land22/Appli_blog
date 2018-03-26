@@ -1,7 +1,7 @@
 <?php
 /**
  * 
- * @author camille
+ * @author Landry
  *
  */
 class Manager
@@ -9,7 +9,13 @@ class Manager
 	protected $_db = null;
 
 	public function __construct() {
-		$this->_db = new PDO('mysql:host=localhost;dbname=blog_MVC;charset=utf8', 'root', 'root');
+		try {
+		$this->_db = new PDO('mysql:host=localhost;dbname=blog_Appli;charset=utf8', 'root', '');
+		}
+		catch(Exception $e){
+			die('Erreur :'.$e->getMessage());
+		}
+		}
 	}
 
 }
