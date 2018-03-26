@@ -1,1 +1,1 @@
-# OCR_P3_SQUELETTE
+# Blog pour poster les chapitres d'un livre et permmettre de poster les commentaires pour chaque chapitre
