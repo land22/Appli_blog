@@ -3,72 +3,118 @@
     <head>
         <meta charset="utf-8" />
         <title><?= $title ?></title>
-        <link href="public/css/style.css" rel="stylesheet" />
-        <script src="public/css/bootstrap-4.0.0/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="public/css/bootstrap-4.0.0/css/bootstrap.min.css">        
-        <script src="public/js/jquery-3.2.1.slim.min.js"></script>
-		<script src="public/js/popper.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">        
+         <link href="public/theme_front/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="public/theme_front/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="public/theme_front/css/clean-blog.min.css" rel="stylesheet">
     </head>
     
     <body>
-    	<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow" style="box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);">
-    		<h5 class="my-0 mr-md-auto font-weight-normal">MAUD BLOG</h5>
-    		<nav class="my-2 my-md-0 mr-md-3">
-    			<a class="p-2 text-dark" href="#">Features</a> 
-    			<a class="p-2 text-dark" href="#">Enterprise</a>
-    			<a class="p-2 text-dark" href="#">Support</a>
-    			<a class="p-2 text-dark" href="#">Pricing</a>
-    		</nav>
-    		<a class="btn btn-outline-primary" href="#">Sign up</a>
-    	</div>
-    
-    	<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    		<h1 class="display-4">LES PETITES LECTURES DE MAUD</h1>
-    		<p class="lead">un blog, des livres</p>
-    	</div>
-    	
+    	 <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Mon blog</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="post.html">Liste des Posts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">A propos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('public/theme_front/img/home-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>Blog pour ecrivain</h1>
+              <span class="subheading">Un blog Permettant de publier un livre en chapitre tout en permettant de poster les commentaires sur chaque chapitre</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     	<div class="container">
     		<?=$content?>    	
     	</div>
 
+<hr>
+          <!-- Pager -->
+          <div class="clearfix">
+            <a class="btn btn-primary float-right" href="#">Autres post &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    	<footer class="pt-4 my-md-5 pt-md-5 border-top">
-    		<div class="row">
-    			<div class="col-12 col-md">
-    				<img class="mb-2" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg"
-    					alt="" width="24" height="24">
-    				<small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
-    			</div>
-    			<div class="col-6 col-md">
-    				<h5>Features</h5>
-    				<ul class="list-unstyled text-small">
-    					<li><a class="text-muted" href="#">Cool stuff</a></li>
-    					<li><a class="text-muted" href="#">Random feature</a></li>
-    					<li><a class="text-muted" href="#">Team feature</a></li>
-    					<li><a class="text-muted" href="#">Stuff for developers</a></li>
-    					<li><a class="text-muted" href="#">Another one</a></li>
-    					<li><a class="text-muted" href="#">Last time</a></li>
-    				</ul>
-    			</div>
-    			<div class="col-6 col-md">
-    				<h5>Resources</h5>
-    				<ul class="list-unstyled text-small">
-    					<li><a class="text-muted" href="#">Resource</a></li>
-    					<li><a class="text-muted" href="#">Resource name</a></li>
-    					<li><a class="text-muted" href="#">Another resource</a></li>
-    					<li><a class="text-muted" href="#">Final resource</a></li>
-    				</ul>
-    			</div>
-    			<div class="col-6 col-md">
-    				<h5>About</h5>
-    				<ul class="list-unstyled text-small">
-    					<li><a class="text-muted" href="#">Team</a></li>
-    					<li><a class="text-muted" href="#">Locations</a></li>
-    					<li><a class="text-muted" href="#">Privacy</a></li>
-    					<li><a class="text-muted" href="#">Terms</a></li>
-    				</ul>
-    			</div>
-    		</div>
-    	</footer>
+    <hr>
+
+    	<!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Blog 2018</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+        <!-- Bootstrap core JavaScript -->
+    <script src="public/theme_front/vendor/jquery/jquery.min.js"></script>
+    <script src="public/theme_front/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="public/theme_front/js/clean-blog.min.js"></script>
 	</body>
 </html>

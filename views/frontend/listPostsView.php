@@ -4,19 +4,24 @@
 
 
 <?php
-if ( !empty($aListposts) ) {
-	while ($comment = $comments->fetch())
-	{
-	?>
-	    <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
-	    <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
+	if ( !empty($aListposts) ) {
+
+		while ($comment = $comments->fetch())
+		{
+
+		?>
+		    <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
+		    <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
+			<?php
+		}
+
+	} 
+
+	  else {
+		?>
+		<p>Aucun enregistrement trouvé</p>
 		<?php
 	}
-} else {
-	?>
-	<p>Aucun enregistrement trouvé</p>
-	<?php
-}
 ?>
 
 
