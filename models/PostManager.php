@@ -4,7 +4,7 @@
  * @author landry
  *
  */
-class Post extends Manager
+class PostManager extends Manager
 {
     /**
      * 
@@ -22,8 +22,8 @@ class Post extends Manager
     {
         $db       = $this->_db;
         $request  = $db->query('SELECT * FROM posts');
-        $result   = $request->fetchAll(PDO::FETCH_ASSOC);
-        return $result;
+        //$result   = $request->fetchAll(PDO::FETCH_ASSOC);
+        return $request;
     }
 
     public function getPost($postId){

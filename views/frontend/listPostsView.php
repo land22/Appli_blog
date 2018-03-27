@@ -1,23 +1,33 @@
-<?php $title = 'Liste des Posts'; ?>
+<?php $title = 'Liste des Posts'; 
+?>
 
 <?php ob_start(); ?>
 
 
-<?php
-	if ( !empty($aListposts) ) {
 
-		while ($comment = $comments->fetch())
+     
+     <div class="row">
+     	<?php
+
+	if ( !empty($listPosts) ) {
+
+		while ($listpost = $listPosts->fetch(PDO::FETCH_ASSOC))
 		{
 
-		?>
-		    <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
-		    <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
+		?><div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-preview">
+		    <h2 class="post-title"><?= htmlspecialchars($listpost['title_post']) ?></h2><p class="post-meta">Posté le <?= $listpost['date_post'] ?></p>
+		    <p class="post-subtitle"><?= nl2br(htmlspecialchars($listpost['content_post'])) ?></p>
+		</div>
+	</div>
+	<hr>
 			<?php
 		}
 
 	} 
 
 	  else {
+	  	
 		?>
 		<p>Aucun enregistrement trouvé</p>
 		<?php

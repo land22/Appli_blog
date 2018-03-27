@@ -7,7 +7,7 @@ define("ABSOLUTE_PATH", dirname(__FILE__));
 require('controllers/frontend.php');
 
 // Autoloader, chargement automatique des classes
-spl_autoload_register( 'custom_autoloader' );
+
 function custom_autoloader($className) {
     $path      = ABSOLUTE_PATH .'/models/';
     $filename  = $path .$className . '.php';
@@ -15,6 +15,8 @@ function custom_autoloader($className) {
         require_once $filename;
     }
 }
+
+spl_autoload_register( 'custom_autoloader' );
 
 
 
@@ -31,7 +33,8 @@ switch ( $action  ) {
 
   	// Par défaut, on affiche la page d'accueil
 	default:
-		homePage();
+	 listPosts();
+		//homePage();
 		break;
 
 }

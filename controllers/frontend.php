@@ -14,7 +14,7 @@ function homepage()
  */
 function listPosts()
 {
-    $post 	   = new Post();
-    $listposts = $post->getListPosts();
+    $post 	   = new PostManager();
+    $listPosts = $post->getListPosts();
     require(ABSOLUTE_PATH.'/views/frontend/listPostsView.php');
 }
