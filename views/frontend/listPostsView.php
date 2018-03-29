@@ -17,7 +17,7 @@
 		?><div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-preview">
 		    <h2 class="post-title"><?= htmlspecialchars($listpost['title_post']) ?></h2><p class="post-meta">Posté le <?= $listpost['date_post'] ?></p>
-		    <p class="post-subtitle"><?= nl2br(htmlspecialchars($listpost['content_post'])) ?></p>
+		    <p class="post-subtitle"><?= nl2br(htmlspecialchars($listpost['sub_title'])) ?></p>
 		</div>
 	</div>
 	<hr>
