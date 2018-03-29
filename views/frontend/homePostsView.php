@@ -1,4 +1,4 @@
-<?php $title = 'Liste des Posts du site'; 
+<?php $title = 'Home List Posts'; 
 ?>
 
 <?php ob_start(); ?>
@@ -9,9 +9,9 @@
      <div class="row">
      	<?php
 
-	if ( !empty($listPosts) ) {
+	if ( !empty($homePosts) ) {
 
-		while ($listpost = $listPosts->fetch(PDO::FETCH_ASSOC))
+		while ($listpost = $homePosts->fetch(PDO::FETCH_ASSOC))
 		{
 
 		?><div class="col-lg-8 col-md-10 mx-auto">

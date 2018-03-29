@@ -29,10 +29,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Accueil</a>
+              <a class="nav-link" href="index.php">Accueil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="post.html">Liste des Posts</a>
+              <a class="nav-link" href="views/frontend/listPostsView.php">Liste des Posts</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">A propos</a>

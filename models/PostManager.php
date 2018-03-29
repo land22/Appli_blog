@@ -18,10 +18,10 @@ class PostManager extends Manager
      * @return array
      */
     
-    public function getListPosts()
+    public function getListPosts($limit = '')
     {
         $db       = $this->_db;
-        $request  = $db->query('SELECT * FROM posts');
+        $request  = $db->query('SELECT id_post, title_post, sub_title, DATE_FORMAT(date_post, \'%d/%m/%Y à %Hh%imin%ss\') AS creation_date_fr FROM posts '.$limit.'');
         //$result   = $request->fetchAll(PDO::FETCH_ASSOC);
         return $request;
     }
