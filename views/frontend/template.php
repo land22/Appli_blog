@@ -32,7 +32,7 @@
               <a class="nav-link" href="index.php">Accueil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="views/frontend/listPostsView.php">Liste des Posts</a>
+              <a class="nav-link" href="index.php?action=<?php echo "listPosts"; ?>">Liste des Posts</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">A propos</a>
@@ -46,33 +46,13 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('public/theme_front/img/home-bg.jpg')">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-              <h1>Blog pour ecrivain</h1>
-              <span class="subheading">Un blog Permettant de publier un livre en chapitre tout en permettant de poster les commentaires sur chaque chapitre</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+    
+    <?=$header ?> 
     	<div class="container">
     		<?=$content?>    	
     	</div>
 
-<hr>
-          <!-- Pager -->
-          <div class="clearfix">
-            <a class="btn btn-primary float-right" href="#">Autres posts &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <hr>
 
     	<!-- Footer -->
     <footer>
