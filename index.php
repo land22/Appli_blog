@@ -33,7 +33,7 @@ switch ( $action  ) {
 
   	// Par défaut, on affiche la page d'accueil
 	default:
-	 listPosts();
+	 homePosts();
 		//homePage();
 		break;
 

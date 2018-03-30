@@ -12,7 +12,7 @@ function homepage()
 /**
  * 
  */
-function listPosts()
+function homePosts()
 {
 	/*
     liste des post pour la page d'acceuil
