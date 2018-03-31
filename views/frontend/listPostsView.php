@@ -31,7 +31,7 @@
 
 		?>
 		<div class="post-preview">
-		    <a href="post.html">
+		    <a href="index.php?action=post&id=<?= $listpost['id_post']?>">
               <h2 class="post-title">
 		    <?= htmlspecialchars($listpost['title_post']) ?>
 		    </h2>

@@ -30,6 +30,19 @@ switch ( $action  ) {
 	case 'listPosts':
 		listPosts();
 		break;
+	//Affiche le contenu d'un post
+    case 'post':
+       if(isset($_GET['id']) && $_GET['id'] > 0){
+		Post();
+		}
+		else {
+			homePosts();
+		}
+		break;
+		//Permet d'ajouter un commentaire à un post
+	case 'addComment':
+	    addComment();
+	    break;
 
   	// Par défaut, on affiche la page d'accueil
 	default:
