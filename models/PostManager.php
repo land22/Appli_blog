@@ -46,11 +46,18 @@ class PostManager extends Manager
       $affectedLines = $comments->execute(array($postId, $author, $comment));
       return $affectedLines ; 
     }
-    public function updatePost($postId){
-
+    public function updatePost($postId, $title, $sub_title, $content){
+      $db = $this->_db;
+      $db->prepare('UPDATE posts SET title =: title, sub_title =: sub_title, content_post=: content_post, date_post =: NOW() WHERE id_post =:id');
+      $db->bindValue('title',$title , PDO::PARAM_STR);
+      $db->bindValue('sub_title',$sub_title , PDO::PARAM_STR);
+      $db->bindValue('content_post',$content_post, PDO::PARAM_STR);
+      $db->bindValue('id',$postId, PDO::PARAM_INT);
+      $db->execute();
     }
     public function deletePost($postId){
-
+      $db = $this->_db;
+      $db->exec('DELETE FROM posts WHERE id_post ='.$postId.'');
     }
 
 
