@@ -5,6 +5,7 @@ define("ABSOLUTE_PATH", dirname(__FILE__));
 
 // Inclusion du controleur 
 require('controllers/frontend.php');
+require('controllers/backend.php');
 
 // Autoloader, chargement automatique des classes
 
@@ -42,6 +43,10 @@ switch ( $action  ) {
 		//Permet d'ajouter un commentaire à un post
 	case 'addComment':
 	    addComment();
+	    break;
+	    //parti concernant l'administration
+	 case 'login':
+	   login();
 	    break;
 
   	// Par défaut, on affiche la page d'accueil
