@@ -48,6 +48,16 @@ switch ( $action  ) {
 	 case 'login':
 	   login();
 	    break;
+	    
+	  case 'adminListPost':
+	  adminListPost();
+	   break;
+
+	   case 'adminListComment':
+	   adminListComment();
+	   break;
+
+
 
   	// Par défaut, on affiche la page d'accueil
 	default:

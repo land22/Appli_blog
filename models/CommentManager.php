@@ -10,12 +10,17 @@ class CommentManager extends Manager
     public function __construct() {
         parent::__construct();
     }
-
+    /*
+      fonction permettant de suprimer un commentaire
+    */
    
     public function deleteComment($idComment){
       $db = $this->_db;
       $db->exec('DELETE FROM comments WHERE id_comment ='.$idComment.'')
     }
+    /*
+    fonction permettant de modifier un commentaire 
+    */
     public function updateComment($commentId, $author,$comment){
      $db = $this->_db;
      $db->prepare('UPDATE comments SET author_comment =: author_comment, comment_date=: NOW(), comment=: comment WHERE id_comment=:id_comment');
