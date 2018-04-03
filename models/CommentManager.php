@@ -14,10 +14,10 @@ class CommentManager extends Manager
       fonction permettant de suprimer un commentaire
     */
    
-    public function deleteComment($idComment){
+   /* public function deleteComment($idComment){
       $db = $this->_db;
       $db->exec('DELETE FROM comments WHERE id_comment ='.$idComment.'')
-    }
+    }*/
     /*
     fonction permettant de modifier un commentaire 
     */
@@ -28,5 +28,14 @@ class CommentManager extends Manager
      $db->bindValue('comment',$comment,PDO::PARAM_STR);
      $db->bindValue('id_comment',$commentId, PDO::PARAM_INT);
      $db->execute();
+    }
+    /*
+    *Liste les commentaires du site
+    */
+    public function ListComment(){
+        $db = $this->_db;
+        $comments = $db->prepare('SELECT id_comment, author_comment, comment, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments');
+        $comments->execute();
+        return $comments;
     }
 }
