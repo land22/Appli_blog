@@ -8,6 +8,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>SB Admin - Start Bootstrap Template</title>
+  <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'textarea' });</script>
   <!-- Bootstrap core CSS-->
   <link href="public/admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
@@ -104,6 +106,8 @@
     <script src="public/admin/js/sb-admin.min.js"></script>
     <!-- Custom scripts for this page-->
     <script src="public/admin/js/sb-admin-datatables.min.js"></script>
+
+    
   </div>
 </body>
 

@@ -13,7 +13,7 @@ function homepage()
  * liste des post pour la page d'acceuil
 
  */
-		function homePosts()
+function homePosts()
 		{
 
 		    $post 	   = new PostManager();
@@ -33,6 +33,10 @@ function homepage()
 		 function Post(){
 		 	$result 	   = new PostManager();
 		 	$post = $result->getPost($_GET['id']);
+			if ( empty($post) ) {
+				header('Location: index.php');
+				exit;
+			}
 		 	$comments = $result->getComments($_GET['id']);
 		 	require(ABSOLUTE_PATH.'/views/frontend/PostView.php');
 		 }

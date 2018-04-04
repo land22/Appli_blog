@@ -33,7 +33,7 @@ switch ( $action  ) {
 		break;
 	//Affiche le contenu d'un post
     case 'post':
-       if(isset($_GET['id']) && $_GET['id'] > 0){
+       if(!empty($_GET['id'])){
 		Post();
 		}
 		else {
@@ -56,9 +56,9 @@ switch ( $action  ) {
 	   case 'adminListComment':
 	   adminListComment();
 	   break;
-
-
-
+	   case 'createPost':
+	   createPost();
+	   break;
   	// Par défaut, on affiche la page d'accueil
 	default:
 	 homePosts();
