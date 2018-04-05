@@ -59,6 +59,9 @@ switch ( $action  ) {
 	   case 'createPost':
 	   createPost();
 	   break;
+	   case 'delPost':
+	   delPost();
+	   break;
   	// Par défaut, on affiche la page d'accueil
 	default:
 	 homePosts();

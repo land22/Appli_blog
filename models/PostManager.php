@@ -59,6 +59,10 @@ class PostManager extends Manager
       $db = $this->_db;
       $db->exec('DELETE FROM posts WHERE id_post ='.$postId.'');
     }
+    public function deleteComment($id){
+      $db = $this->_db;
+      $db->exec('DELETE FROM comments WHERE id_post='.$id.' OR id_comment ='.$id.'');
+    }
 
 
 }

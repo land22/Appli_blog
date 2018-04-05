@@ -23,12 +23,17 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html">Administration du blog</a>
+    <a class="navbar-brand" href="index.html">Administration</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Liste des Posts">
+          <a class="nav-link" href="index.php">
+            <span class="nav-link-text">Retour à l'accueil</span>
+          </a>
+        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Liste des Posts">
           <a class="nav-link" href="index.php?action=adminListPost">
             <i class="fa fa-fw fa-table"></i>
@@ -36,7 +41,7 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Liste des commentaires">
-          <a class="nav-link " data-toggle="collapse" href="index.php?action=adminListComment" data-parent="#exampleAccordion">
+          <a class="nav-link "  href="index.php?action=adminListPost" >
             <i class="fa fa-fw fa-wrench"></i>
             <span class="nav-link-text">Liste des commentaires</span>
           </a>
@@ -89,7 +94,7 @@
           <div class="modal-body">Selectionner "Deconnexion" ci-dessus si vous voulez fermer votre session.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Annuler</button>
-            <a class="btn btn-primary" href="login.html">Déconnexion</a>
+            <a class="btn btn-primary" href="index.php">Déconnexion</a>
           </div>
         </div>
       </div>
