@@ -40,6 +40,14 @@ class PostManager extends Manager
         $comments->execute(array($postId));
         return $comments;
     }
+
+    public function insertPost($title, $subTitle, $content){
+      $db = $this->_db;
+      $posts = $db->prepare('INSERT INTO posts( title_post, sub_title, content_post, date_post) VALUES(?, ?, ?, NOW())');
+      $affectedLines = $posts->execute(array($title, $subTitle, $content));
+      return $affectedLines ; 
+    }
+
     public function insertComment($postId, $author, $comment){
       $db = $this->_db;
       $comments = $db->prepare('INSERT INTO comments(id_post, author_comment, comment, comment_date) VALUES(?, ?, ?, NOW())');

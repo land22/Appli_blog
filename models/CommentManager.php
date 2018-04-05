@@ -31,10 +31,11 @@ class CommentManager extends Manager
     }
     /*
     *Liste les commentaires du site
+    *avec un $id en parametre qui est optionel
     */
-    public function ListComment(){
+    public function ListComment($id=''){
         $db = $this->_db;
-        $comments = $db->prepare('SELECT id_comment, author_comment, comment, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments');
+        $comments = $db->prepare('SELECT id_comment, author_comment, comment, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments WHERE id_post = '.$id.'');
         $comments->execute();
         return $comments;
     }

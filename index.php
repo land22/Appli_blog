@@ -44,24 +44,34 @@ switch ( $action  ) {
 	case 'addComment':
 	    addComment();
 	    break;
-	    //parti concernant l'administration
+	    //parti concernant la page de connexion
 	 case 'login':
 	   login();
 	    break;
-	    
+	    // action Pour Liste les post coté admin 
 	  case 'adminListPost':
 	  adminListPost();
 	   break;
-
+       // action pour Liste les Commentaires coté admin 
 	   case 'adminListComment':
 	   adminListComment();
 	   break;
+	   //action pour ouvrir le formulaire d'insertion d'un post
+	   case 'formPost':
+	   formPost();
+	   break;
+	   //action pour creer un post
 	   case 'createPost':
 	   createPost();
 	   break;
+      //action pour supprimer un post
 	   case 'delPost':
 	   delPost();
 	   break;
+      //action pour supprimer un commentaire
+	   case 'delComment':
+	     delComment();
+	     break;
   	// Par défaut, on affiche la page d'accueil
 	default:
 	 homePosts();
