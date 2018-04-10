@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>SB Admin - Start Bootstrap Template</title>
+  <title>Administration du blog</title>
   <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
   <script>tinymce.init({ selector:'textarea' });</script>
   <!-- Bootstrap core CSS-->
@@ -94,7 +94,7 @@
           <div class="modal-body">Selectionner "Deconnexion" ci-dessus si vous voulez fermer votre session.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Annuler</button>
-            <a class="btn btn-primary" href="index.php">Déconnexion</a>
+            <a class="btn btn-primary" href="index.php?action=disconnect">Déconnexion</a>
           </div>
         </div>
       </div>

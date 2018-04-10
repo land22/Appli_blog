@@ -1,4 +1,9 @@
 <?php 
+
+/*Initialisation de la classe user manager*/
+
+
+
 function login()
 		   {
 		    require(ABSOLUTE_PATH.'/views/backend/loginView.php');
@@ -9,27 +14,51 @@ function login()
 
 function adminListPost()
               {
+              	if (isset($_SESSION['auth'])) {
               	 $post 	   = new PostManager();
 		    	 $listPosts = $post->getListPosts();
               	require(ABSOLUTE_PATH.'/views/backend/viewPost.php');
+               }
+               else {
+               	header('Location:index.php');
+               }
               }
        /*
 	  **action pour lister les commentaires coté admin
 	  */
 
 function adminListComment()
-		{
+		{  
+			if (isset($_SESSION['auth'])) {
 			     $comment	   = new CommentManager();
-		    	 $listComments = $comment->ListComment($_GET['id']);
-		 require(ABSOLUTE_PATH.'/views/backend/viewComment.php');	
+			     if (isset($_GET['id'])) {
+			     	 $listComments = $comment->ListComment($_GET['id']);
+			     }
+
+			     else {
+                    $listComments = $comment->ListComment();
+			     }
+		    	
+		 require(ABSOLUTE_PATH.'/views/backend/viewComment.php');
+		 }
+          
+          else {
+               	header('Location:index.php');
+               }	
 		}
 				/*
 		**action pour ouvrir le formulaire d'insertion d'un post
 		*/
 		
 function formPost()
-       {
+       { 
+       	if (isset($_SESSION['auth'])) 
+       	{
 	require(ABSOLUTE_PATH.'/views/backend/formView.php');
+	    }
+        else {
+           header('Location:index.php');
+             }
       }
 		/*
 		**action pour creer un post
@@ -37,10 +66,16 @@ function formPost()
 		
 function createPost()
        {
+       	if (isset($_SESSION['auth'])) {
        	$post = new PostManager();
        	$post->insertPost($_POST['titlePost'],$_POST['subTitle'],$_POST['contentPost']);
 	header('Location:index.php?action=adminListPost');
+	   }
+       else {
+              header('Location:index.php');
+            }
       }
+
 
       /*
 	  **action pour suprimer un post
@@ -50,14 +85,47 @@ function createPost()
 
 function delPost()
     {
-	$post = new PostManager();
-    $post->deleteComment($_GET['id']);
+    if (isset($_SESSION['auth'])) 
+    {
+		$post = new PostManager();
+	    if (isset($_GET['id'])) {
+	  		$post->deleteComment($_GET['id']);
+	  	}
+	  	else{
+	        $post->deleteComment();
+	  	}
 	$post->deletePost($_GET['id']);
 	header('Location:index.php?action=adminListPost');
     }
+    else {
+          header('Location:index.php');
+          }
+    }
   function delComment()
-  {
+  { 
+  	if (isset($_SESSION['auth'])) {
+
   	$post = new PostManager();
-  	$post->deleteComment($_GET['id']);
+  	if (isset($_GET['id'])) {
+  		$post->deleteComment($_GET['id']);
+  	}
+  	else{
+        $post->deleteComment();
+  	}
   	header('Location:index.php?action=adminListPost');
+  	}
+    else {
+      header('Location:index.php');
+           }
   }
+  /*
+  Parti pour la gestion d'autentification
+  */
+   function connect(){
+   	$user = new UserManager();
+   	$user->logint($_POST['username'],$_POST['password']);
+   }
+   function disconnect(){
+   	$user = new UserManager();
+   $user->logout();
+   }

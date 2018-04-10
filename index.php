@@ -1,5 +1,8 @@
 <?php
 
+
+session_start();
+
 // Definition du path absolu
 define("ABSOLUTE_PATH", dirname(__FILE__));
 
@@ -72,6 +75,12 @@ switch ( $action  ) {
 	   case 'delComment':
 	     delComment();
 	     break;
+	    case 'connect':
+	    connect();
+	    break;
+	    case 'disconnect':
+	    disconnect();
+	    break;
   	// Par défaut, on affiche la page d'accueil
 	default:
 	 homePosts();

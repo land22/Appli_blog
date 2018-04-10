@@ -23,7 +23,7 @@
      <div class="row">
      	<div class="col-lg-8 col-md-10 mx-auto">
      		<h3><?= htmlspecialchars($post['title_post']) ?></h3>
-     		<p><?= htmlspecialchars($post['content_post']) ?></p>
+     		<p><?= $post['content_post'] ?></p>
      		<p class="post-meta">Posté le <?= $post['creation_date_fr'] ?></p>
      		
      	<?php

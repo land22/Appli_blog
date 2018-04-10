@@ -36,7 +36,7 @@
 		    <?= htmlspecialchars($listpost['title_post']) ?>
 		    </h2>
 		    <h3 class="post-subtitle">
-		    <?= nl2br(htmlspecialchars($listpost['sub_title'])) ?>
+		    <?= $listpost['sub_title'] ?>
 		    </h3>
             </a>
 		    <p class="post-meta">Posté le <?= $listpost['creation_date_fr'] ?></p>

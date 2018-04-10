@@ -5,7 +5,6 @@
 
         <div class="card-header">
           <i class="fa fa-table"></i> Liste des posts du site</div>
-
         <div class="card-body">
           <a class="btn btn-primary" href="index.php?action=formPost">Ajouter un post</a>
          <div class="table-responsive">
