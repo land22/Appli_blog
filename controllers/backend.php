@@ -123,7 +123,8 @@ function delPost()
   */
    function connect(){
    	$user = new UserManager();
-   	$user->logint($_POST['username'],$_POST['password']);
+   $pass = md5($_POST['password']);
+   	$user->logint($_POST['username'],$pass);
    }
    function disconnect(){
    	$user = new UserManager();
