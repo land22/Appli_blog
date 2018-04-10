@@ -31,7 +31,7 @@
                   <td><?= htmlspecialchars($data['author_comment']) ?></td>
                   <td><?= htmlspecialchars($data['comment']) ?></td>
                   <td><?= htmlspecialchars($data['comment_date_fr']) ?></td>
-                  <td><a><i class="fa fa-trash-o" style="font-size:28px"></i></a></td>
+                  <td><a href="index.php?action=delComment&id=<?=$data['id_comment'] ?>"><i class="fa fa-trash-o" style="font-size:28px"></i></a></td>
                 </tr>
      <?php
        }
