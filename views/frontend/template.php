@@ -93,10 +93,6 @@
         <!-- Bootstrap core JavaScript -->
     <script src="public/theme_front/vendor/jquery/jquery.min.js"></script>
     <script src="public/theme_front/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Contact Form JavaScript -->
-    <script src="public/theme_front/js/jqBootstrapValidation.js"></script>
-    <script src="public/theme_front/js/contact_me.js"></script>
-
     <!-- Custom scripts for this template -->
     <script src="public/theme_front/js/clean-blog.min.js"></script>
 	</body>

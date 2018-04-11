@@ -86,3 +86,6 @@
   <?php $content = ob_get_clean(); ?>
 
 <?php require('template.php'); ?>
+ <!-- Contact Form JavaScript -->
+    <script src="public/theme_front/js/jqBootstrapValidation.js"></script>
+    <script src="public/theme_front/js/contact_me.js"></script>
