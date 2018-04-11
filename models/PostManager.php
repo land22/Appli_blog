@@ -21,7 +21,7 @@ class PostManager extends Manager
     public function getListPosts($limit = '')
     {
         $db       = $this->_db;
-        $request  = $db->query('SELECT id_post, title_post, sub_title, DATE_FORMAT(date_post, \'%d/%m/%Y à %Hh%imin%ss\') AS creation_date_fr FROM posts '.$limit.'');
+        $request  = $db->query('SELECT id_post, title_post, sub_title, DATE_FORMAT(date_post, \'%d/%m/%Y à %Hh%imin%ss\') AS creation_date_fr FROM posts ORDER BY id_post DESC'.$limit.'');
         //$result   = $request->fetchAll(PDO::FETCH_ASSOC);
         return $request;
     }
@@ -56,12 +56,8 @@ class PostManager extends Manager
     }
     public function updatePost($postId, $title, $sub_title, $content){
       $db = $this->_db;
-      $db->prepare('UPDATE posts SET title =: title, sub_title =: sub_title, content_post=: content_post, date_post =: NOW() WHERE id_post =:id');
-      $db->bindValue('title',$title , PDO::PARAM_STR);
-      $db->bindValue('sub_title',$sub_title , PDO::PARAM_STR);
-      $db->bindValue('content_post',$content_post, PDO::PARAM_STR);
-      $db->bindValue('id',$postId, PDO::PARAM_INT);
-      $db->execute();
+      $req = $db->prepare('UPDATE posts SET title_post = :title, sub_title = :sub_title, content_post= :content_post, date_post = NOW() WHERE id_post = :id_post');
+    $req->execute(array('title'=>$title,'sub_title' =>$sub_title,'content_post'=>$content,'id_post'=>$postId));
     }
     public function deletePost($postId){
       $db = $this->_db;

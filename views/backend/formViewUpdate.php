@@ -1,5 +1,5 @@
 <?php ob_start(); ?>
-<form action="index.php?action=upPost" method="Post">
+<form action="index.php?action=upPost&id=<?=$data['id_post']?>" method="Post">
   <div class="form-group">
     <label for="exampleInputEmail1">Titre</label>
     <input name="titlePost" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?=$data['title_post']?>">
@@ -15,7 +15,7 @@ $data['sub_title']?>">
   <textarea name="contentPost" value="<?= $data['content_post']?>"></textarea>
   </div>
   <button type="submit" class="btn btn-primary">Modifier</button>
-  <input type="text" name="id" value="<?=$data['id_post']?>">
+  <input type="hidden" name="id" value="<?=$data['id_post']?>">
 </form>
 <?php $content = ob_get_clean(); ?>
 <?php require 'template_admin.php'; ?>

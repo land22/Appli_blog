@@ -43,7 +43,7 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Liste des commentaires">
           <a class="nav-link "  href="index.php?action=adminListPost" >
             <i class="fa fa-fw fa-wrench"></i>
-            <span class="nav-link-text">Liste des commentaires</span>
+            <span class="nav-link-text">Liste des commentaires signalés</span>
           </a>
         </li>
       </ul>

@@ -134,10 +134,7 @@ function upPost()
     if (isset($_GET['id']))
     {
       $post->getPost($_GET['id']);
-      $_SESSION['title'] = $post['title_post'];
-      $_SESSION['sub_title'] = $post['sub_title'];
-      $_SESSION['content_post'] = $post['content_post'];
-      //$post->updatePost();
+      $post->updatePost($_POST['id'], $_POST['titlePost'], $_POST['subTitle'], $_POST['contentPost']);
     }
     header('Location:index.php?action=adminListPost');
   }
