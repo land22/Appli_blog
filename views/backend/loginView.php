@@ -1,4 +1,4 @@
-<?php $title = 'Admin blog' ?>
+<?php $title = 'Administration du blog' ?>
 <?php ob_start(); ?>
 <div class="card card-login mx-auto mt-5">
       <div class="card-header">Vos identifiants de connection</div>
@@ -19,6 +19,7 @@
             <input class="form-control" id="exampleInputPassword1" name="password" type="password" placeholder="Password">
           </div>
           <button class="btn btn-primary btn-block" type="">Valider</button>
+          <div><a href="index.php">Retour au blog</a></div>
         </form>
       </div>
     </div>

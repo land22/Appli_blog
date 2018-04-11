@@ -47,6 +47,10 @@ switch ( $action  ) {
 	case 'addComment':
 	    addComment();
 	    break;
+	    //Route pour la page de contact
+	case 'contact':
+	     contact();
+	     break;
 	    //parti concernant la page de connexion
 	 case 'login':
 	   login();
@@ -72,6 +76,12 @@ switch ( $action  ) {
 	   delPost();
 	   break;
       //action pour supprimer un commentaire
+	   case 'formUpdatePost':
+	   formUpdatePost();
+	    break;
+	   case 'upPost':
+         upPost();
+         break;
 	   case 'delComment':
 	     delComment();
 	     break;

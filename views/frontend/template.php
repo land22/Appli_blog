@@ -32,13 +32,13 @@
               <a class="nav-link" href="index.php">Accueil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.php?action=<?php echo "listPosts"; ?>">Liste des Posts</a>
+              <a class="nav-link" href="index.php?action=listPosts">Liste des Posts</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">A propos</a>
+              <a class="nav-link" href="index.php?action=contact">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="index.php?action=login">Connection</a>
             </li>
           </ul>
         </div>
@@ -93,6 +93,9 @@
         <!-- Bootstrap core JavaScript -->
     <script src="public/theme_front/vendor/jquery/jquery.min.js"></script>
     <script src="public/theme_front/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Contact Form JavaScript -->
+    <script src="public/theme_front/js/jqBootstrapValidation.js"></script>
+    <script src="public/theme_front/js/contact_me.js"></script>
 
     <!-- Custom scripts for this template -->
     <script src="public/theme_front/js/clean-blog.min.js"></script>

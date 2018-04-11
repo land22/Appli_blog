@@ -43,7 +43,9 @@
 		    <p>
 		    <p class="post-meta">Commenté par
               <a href="#"><?= nl2br(htmlspecialchars($comment['author_comment'])) ?></a> Le
-              <?= nl2br(htmlspecialchars($comment['comment_date_fr'])) ?></p>
+              <?= nl2br(htmlspecialchars($comment['comment_date_fr'])) ?></p><button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-exclamation-sign"></span> signaler
+        </button>
 		</div>
           <hr>
 			<?php
