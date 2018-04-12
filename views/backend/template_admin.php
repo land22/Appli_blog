@@ -18,6 +18,8 @@
   <link href="public/admin/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="public/admin/css/sb-admin.css" rel="stylesheet">
+
+  <link href="public/admin/css/style.css" rel="stylesheet">
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -41,7 +43,7 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Liste des commentaires">
-          <a class="nav-link "  href="index.php?action=adminListPost" >
+          <a class="nav-link "  href="index.php?action=adminListCommentModer" >
             <i class="fa fa-fw fa-wrench"></i>
             <span class="nav-link-text">Liste des commentaires signalés</span>
           </a>

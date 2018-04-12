@@ -39,4 +39,32 @@ class CommentManager extends Manager
         $comments->execute();
         return $comments;
     }
+    /*
+    *Liste les commentaires du site modérer
+    *
+    */
+    public function ListCommentModer() {
+         $db = $this->_db;
+        $comments = $db->prepare('SELECT id_comment, author_comment, comment, flag, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments WHERE flag = 1 ');
+        $comments->execute();
+        return $comments;
+    }
+    /*
+    *requette pour moderer un commentaire
+    *
+    */
+     public function ModerComment($idComment){
+      $db = $this->_db;
+      $req = $db->prepare('UPDATE comments SET flag = 1 WHERE id_comment = :id_comment');
+      $req->execute(array('id_comment'=>$idComment));
+    }
+    /*
+    *requette pour restaurer un commentaire moderer
+    *
+    */
+     public function RestoreComment($idComment){
+      $db = $this->_db;
+      $req = $db->prepare('UPDATE comments SET flag = 0 WHERE id_comment = :id_comment');
+      $req->execute(array('id_comment'=>$idComment));
+    }
 }

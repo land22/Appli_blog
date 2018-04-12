@@ -47,6 +47,23 @@ function adminListComment()
     header('Location:index.php');
   }	
 }
+/*
+**action pour lister les commentaires moderer
+*/
+function adminListCommentModer()
+{
+  if (isset($_SESSION['auth']))
+  {
+    $comment = new CommentManager();
+    $listComments = $comment->ListCommentModer();
+    require (ABSOLUTE_PATH.'/views/backend/viewCommentModer.php');
+  }
+  else
+  {
+    header('Location:index.php');
+  }
+
+}
 
 /*
 **action pour ouvrir le formulaire d'insertion d'un post
