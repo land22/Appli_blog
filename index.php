@@ -67,6 +67,10 @@ switch ( $action  ) {
 	   case 'adminListCommentModer':
 	   adminListCommentModer();
 	   break;
+	   //action pour restaurer les commentaires modérés
+	   case 'adminRestorComment':
+	   adminRestorComment();
+	   break;
 	   //action pour ouvrir le formulaire d'insertion d'un post
 	   case 'formPost':
 	   formPost();

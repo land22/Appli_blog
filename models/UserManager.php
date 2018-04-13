@@ -8,7 +8,7 @@ class UserManager extends Manager
 {
 	public function logint($username,$password){
 		$db = $this->_db;
-		$user = $db->prepare('SELECT * FROM users WHERE(user_name = ? AND user_password = ?)');
+		$user = $db->prepare('SELECT user_name FROM users WHERE(user_name = ? AND user_password = ?)');
 		$user->execute(array($username,$password));
 		$result = $user->fetchAll();
 		if (isset($result) AND $result <> NULL){

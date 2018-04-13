@@ -64,6 +64,30 @@ function adminListCommentModer()
   }
 
 }
+/*
+**action pour restaurer un commentaire
+*/
+function adminRestorComment()
+{
+  if (isset($_SESSION['auth']))
+  { 
+    if(isset($_GET['id']))
+    {
+    $comment = new CommentManager();
+    $comment->RestoreComment($_GET['id']);
+    header('Location:index.php?action=adminListCommentModer');
+    }
+    else 
+    {
+     header('Location:index.php?action=adminListPost'); 
+    }
+
+  }
+  else
+  {
+    header('Location:index.php');
+  }
+}
 
 /*
 **action pour ouvrir le formulaire d'insertion d'un post
