@@ -6,7 +6,7 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
-              <h4><?= htmlspecialchars($post['title_post']) ?></h4>
+              <h4 style="word-break: break-word;"><?= htmlspecialchars($post['title_post']) ?></h4>
               
             </div>
           </div>
@@ -19,8 +19,8 @@
 
     <div class="row">
      	<div class="col-lg-8 col-md-10 mx-auto">
-     		<h3><?= htmlspecialchars($post['title_post']) ?></h3>
-     		<p><?= $post['content_post'] ?></p>
+     		<h3 style="word-break: break-word;"><?= htmlspecialchars($post['title_post']) ?></h3>
+     		<p style="word-break: break-word;"><?= $post['content_post'] ?></p>
      		<p class="post-meta">Posté le <?= $post['creation_date_fr'] ?></p>
      		<?php
       if ( isset($comments) )
@@ -35,7 +35,7 @@
 		  <div class="post-preview">
 		    <p style="word-break: break-word;">
 		      <?= nl2br(htmlspecialchars($comment['comment'])) ?>
-        <a href="index.php?action=signalComment&id=<?= $comment['id_comment'] ?>"><button type="button" class="btn btn-default btn-sm">signaler</button></a>
+        <a title="Signalé ce commentaire" href="index.php?action=signalComment&id=<?= $comment['id_comment'] ?>"><i class="fa fa-exclamation-circle" style="font-size:30px"></i></a>
 		    <p>
 		    <p class="post-meta">Commenté par
           <a href="#"><?= nl2br(htmlspecialchars($comment['author_comment'])) ?></a> Le <?= nl2br(htmlspecialchars($comment['comment_date_fr'])) ?></p>

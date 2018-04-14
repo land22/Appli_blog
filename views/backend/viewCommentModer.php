@@ -31,7 +31,7 @@
                   <td><?= htmlspecialchars($data['author_comment']) ?></td>
                   <td style="word-break: break-word;"><?= htmlspecialchars($data['comment']) ?></td>
                   <td><?= $data['comment_date_fr'] ?></td>
-                  <td><a class="btn btn-primary" href="index.php?action=delComment&id=<?= $data['id_comment']?>">Moderé</a> <a class="btn btn-primary" href="index.php?action=adminRestorComment&id=<?= $data['id_comment']?>">Restauré</a></td>
+                  <td><a href="index.php?action=delComment&id=<?= $data['id_comment']?>"><i title="Supprimé le commentaire" class="fa fa-trash-o" style="font-size:28px"></i></a> <a href="index.php?action=adminRestorComment&id=<?= $data['id_comment']?>"><i title="Restauré le commentaire" class="fa fa-refresh" style="font-size:28px"></i></a></td>
                 </tr>
     <?php 
     } // fin de la boucle while

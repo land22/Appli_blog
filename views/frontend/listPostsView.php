@@ -29,10 +29,10 @@
 		?>
 			<div class="post-preview">
 		    	<a href="index.php?action=post&id=<?= $listpost['id_post']?>">
-              		<h2 class="post-title">
+              		<h2 class="post-title"style="word-break: break-word;">
 		    			<?= htmlspecialchars($listpost['title_post']) ?>
 		   		    </h2>
-		   		    <h3 class="post-subtitle">
+		   		    <h3 class="post-subtitle" style="word-break: break-word;">
 		            	<?= $listpost['sub_title'] ?>
 		            </h3>
                 </a>
