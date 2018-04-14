@@ -38,14 +38,13 @@
 
 		?>
 		<div class="post-preview">
-		    <p>
+		    <p style="word-break: break-word;">
 		    <?= nl2br(htmlspecialchars($comment['comment'])) ?>
+        <a href="index.php?action=signalComment&id=<?= $comment['id_comment'] ?>"><button type="button" class="btn btn-default btn-sm">signaler</button></a>
 		    <p>
 		    <p class="post-meta">Commenté par
               <a href="#"><?= nl2br(htmlspecialchars($comment['author_comment'])) ?></a> Le
-              <?= nl2br(htmlspecialchars($comment['comment_date_fr'])) ?></p><button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-exclamation-sign"></span> signaler
-        </button>
+              <?= nl2br(htmlspecialchars($comment['comment_date_fr'])) ?></p>
 		</div>
           <hr>
 			<?php
@@ -60,19 +59,19 @@
 <form name="sentMessage" id="contactForm" action="index.php?action=addComment&id=<?= $post['id_post'] ?>" method="post">
 	<legend>Laisser un commentaire</legend>
             <div class="control-group">
-              <div class="form-group floating-label-form-group controls">
+              <!--<div class="form-group floating-label-form-group controls">-->
                 <label>Votre nom </label>
                 <input type="text" class="form-control" placeholder="Votre nom" id="name" name="author" required data-validation-required-message="Please enter your name.">
                 <p class="help-block text-danger"></p>
-              </div>
+              <!--</div>-->
             </div>
            
             <div class="control-group">
-              <div class="form-group floating-label-form-group controls">
+             <!-- <div class="form-group floating-label-form-group controls">-->
                 <label>Votre commentaire</label>
-                <textarea rows="5" class="form-control" placeholder="Votre commentaire" id="message" required data-validation-required-message="Please enter a message." name="comment"></textarea>
+                <textarea rows="5" class="form-control" placeholder="Votre commentaire" id="message" required data-validation-required-message="Votre commentaire." name="comment"></textarea>
                 <p class="help-block text-danger"></p>
-              </div>
+              <!--</div>-->
             </div>
             <br>
             <div id="success"></div>

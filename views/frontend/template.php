@@ -15,6 +15,7 @@
 
     <!-- Custom styles for this template -->
     <link href="public/theme_front/css/clean-blog.min.css" rel="stylesheet">
+    <link href="public/theme_front/css/style.css" rel="stylesheet">
     </head>
     
     <body>

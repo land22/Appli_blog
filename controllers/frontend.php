@@ -70,6 +70,12 @@ function addComment()
 		header('Location: index.php?action=post&id='.$_GET['id']);
 	}
 }
+function signalComment()
+{
+	$req = new CommentManager();
+	$req->ModerComment($_GET['id']);
+	header('Location:index.php?action=listPosts');
+}
 
 		   
 

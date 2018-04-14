@@ -1,19 +1,18 @@
 <?php
 
-
 session_start();
 
 // Definition du path absolu
 define("ABSOLUTE_PATH", dirname(__FILE__));
 
-// Inclusion du controleur 
+// Inclusion des controleur 
 require('controllers/frontend.php');
 require('controllers/backend.php');
 
 // Autoloader, chargement automatique des classes
-
-function custom_autoloader($className) {
-    $path      = ABSOLUTE_PATH .'/models/';
+function custom_autoloader($className)
+{
+	$path      = ABSOLUTE_PATH .'/models/';
     $filename  = $path .$className . '.php';
     if ( file_exists($filename) ) {
         require_once $filename;
@@ -22,10 +21,9 @@ function custom_autoloader($className) {
 
 spl_autoload_register( 'custom_autoloader' );
 
-
-
 $action = "";
-if ( !empty($_GET['action'] )) {
+if ( !empty($_GET['action'] )) 
+{
 	$action = $_GET['action'];
 }
 switch ( $action  ) {
@@ -36,72 +34,77 @@ switch ( $action  ) {
 		break;
 	//Affiche le contenu d'un post
     case 'post':
-       if(!empty($_GET['id'])){
-		Post();
-		}
-		else {
-			homePosts();
-		}
-		break;
-		//Permet d'ajouter un commentaire à un post
+       if(!empty($_GET['id']))
+       {
+	   	  Post();
+	   }
+	   else 
+	   {
+	      homePosts();
+	   }
+	   break;
+	//Permet d'ajouter un commentaire à un post
 	case 'addComment':
 	    addComment();
 	    break;
 	    //Route pour la page de contact
 	case 'contact':
-	     contact();
-	     break;
+	    contact();
+	    break;
 	    //parti concernant la page de connexion
-	 case 'login':
-	   login();
+	case 'login':
+	    login();
 	    break;
 	    // action Pour Liste les post coté admin 
-	  case 'adminListPost':
-	  adminListPost();
-	   break;
-       // action pour Liste les Commentaires coté admin 
-	   case 'adminListComment':
-	   adminListComment();
-	   break;
-	   //action pour lister les commentaires moderés
-	   case 'adminListCommentModer':
-	   adminListCommentModer();
-	   break;
-	   //action pour restaurer les commentaires modérés
-	   case 'adminRestorComment':
-	   adminRestorComment();
-	   break;
-	   //action pour ouvrir le formulaire d'insertion d'un post
-	   case 'formPost':
-	   formPost();
-	   break;
-	   //action pour creer un post
-	   case 'createPost':
-	   createPost();
-	   break;
-      //action pour supprimer un post
-	   case 'delPost':
-	   delPost();
-	   break;
-      //action pour supprimer un commentaire
-	   case 'formUpdatePost':
-	   formUpdatePost();
+	case 'adminListPost':
+	    adminListPost();
 	    break;
-	   case 'upPost':
-         upPost();
-         break;
-	   case 'delComment':
-	     delComment();
-	     break;
-	    case 'connect':
+       // action pour Liste les Commentaires coté admin 
+	case 'adminListComment':
+	    adminListComment();
+	    break;
+	   //action pour lister les commentaires moderés
+	case 'adminListCommentModer':
+	    adminListCommentModer();
+	    break;
+	   //action pour restaurer les commentaires modérés
+	case 'adminRestorComment':
+	    adminRestorComment();
+	    break;
+	   //action pour ouvrir le formulaire d'insertion d'un post
+	case 'signalComment':
+	    signalComment();
+	    break;
+	case 'formPost':
+	    formPost();
+	    break;
+	   //action pour creer un post
+	case 'createPost':
+	    createPost();
+	    break;
+      //action pour supprimer un post
+	case 'delPost':
+	    delPost();
+	    break;
+      //action pour supprimer un commentaire
+	case 'formUpdatePost':
+	    formUpdatePost();
+	    break;
+    case 'upPost':
+        upPost();
+        break;
+	case 'delComment':
+	    delComment();
+	    break;
+	case 'connect':
 	    connect();
 	    break;
-	    case 'disconnect':
+	case 'disconnect':
 	    disconnect();
 	    break;
   	// Par défaut, on affiche la page d'accueil
 	default:
-	 homePosts();
+	    homePosts();
 		//homePage();
 		break;
 
