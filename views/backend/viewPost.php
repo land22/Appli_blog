@@ -45,9 +45,6 @@
           </div>
         </div>
       </div>
-  
-    
 
-    <?php $content = ob_get_clean(); ?>
-<?php
-require 'template_admin.php'; ?>
+  <?php $content = ob_get_clean(); ?>
+  <?php require 'template_admin.php'; ?>

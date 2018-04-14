@@ -25,36 +25,36 @@
         <div class="col-lg-8 col-md-10 mx-auto">
      	<?php
 
-	if ( !empty($homePosts) ) {
+	if ( !empty($homePosts) )
+  {
 
 		while ($listpost = $homePosts->fetch(PDO::FETCH_ASSOC))
 		{
-
 		?>
-          <div class="post-preview">
+      <div class="post-preview">
 		    <a href="index.php?action=post&id=<?= $listpost['id_post']?>">
-              <h2 class="post-title">
-		    	<?= htmlspecialchars($listpost['title_post']) ?>
+          <h2 class="post-title" style="word-break: break-word;">
+		    	 <?= htmlspecialchars($listpost['title_post']) ?>
 		    	</h2>
-		    <h3 class="post-subtitle">
-		    	<?= nl2br(htmlspecialchars($listpost['sub_title'])) ?>
-		    	</h3>
-            </a>
+		      <h3 class="post-subtitle" style="word-break: break-word;">
+		    	  <?= nl2br(htmlspecialchars($listpost['sub_title'])) ?>
+		      </h3>
+        </a>
 		    	<p class="post-meta">Posté le <?= $listpost['creation_date_fr'] ?></p>
-		</div>
+		  </div>
           <hr>
 			<?php
-		}
+		} // fin while
 
-	} 
+	} // fin if
 
-	  else {
-	  	
-		?>
-		<p class="post-meta">Aucun enregistrement trouvé</p>
-		<?php
-	}
-?>
+	else
+  {
+  ?>
+	  <p class="post-meta">Aucun enregistrement trouvé</p>
+	<?php
+	} //fin else
+  ?>
 
           <!-- Pager -->
           <div class="clearfix">
@@ -62,8 +62,6 @@
           </div>
         </div>
         </div>
-      
-
     <hr>
 
 <?php $content = ob_get_clean(); ?>

@@ -17,45 +17,40 @@
 
 <?php ob_start(); ?>
 
-
-
-     
-     <div class="row">
+    <div class="row">
      	<div class="col-lg-8 col-md-10 mx-auto">
      		<h3><?= htmlspecialchars($post['title_post']) ?></h3>
      		<p><?= $post['content_post'] ?></p>
      		<p class="post-meta">Posté le <?= $post['creation_date_fr'] ?></p>
-     		
-     	<?php
-
-	if ( isset($comments) ) {
-        ?>
+     		<?php
+      if ( isset($comments) )
+      {
+      ?>
         <h3>Liste des commentaires associés à ce post</h3>
         <hr>
         <?php
-		while ($comment = $comments->fetch(PDO::FETCH_ASSOC))
-		{
-
-		?>
-		<div class="post-preview">
+		    while ($comment = $comments->fetch(PDO::FETCH_ASSOC))
+		    {
+		    ?>
+		  <div class="post-preview">
 		    <p style="word-break: break-word;">
-		    <?= nl2br(htmlspecialchars($comment['comment'])) ?>
+		      <?= nl2br(htmlspecialchars($comment['comment'])) ?>
         <a href="index.php?action=signalComment&id=<?= $comment['id_comment'] ?>"><button type="button" class="btn btn-default btn-sm">signaler</button></a>
 		    <p>
 		    <p class="post-meta">Commenté par
-              <a href="#"><?= nl2br(htmlspecialchars($comment['author_comment'])) ?></a> Le
-              <?= nl2br(htmlspecialchars($comment['comment_date_fr'])) ?></p>
-		</div>
+          <a href="#"><?= nl2br(htmlspecialchars($comment['author_comment'])) ?></a> Le <?= nl2br(htmlspecialchars($comment['comment_date_fr'])) ?></p>
+		  </div>
           <hr>
 			<?php
-		}
+		    } // fin while
 
-	} else {
-		 echo '<h3 class="post-title">Aucun commentaire enregistré pour ce poste pour l\'instant</h3>';
-	}
-?>
+	    } // fin if 
 
-
+      else
+      {
+		    echo '<h3 class="post-title">Aucun commentaire enregistré pour ce poste pour l\'instant</h3>';
+	    } // fin else
+      ?>
 <form name="sentMessage" id="contactForm" action="index.php?action=addComment&id=<?= $post['id_post'] ?>" method="post">
 	<legend>Laisser un commentaire</legend>
             <div class="control-group">
@@ -81,10 +76,6 @@
           </form>
           </div><!--close mx-auto div-->
         </div><!-- close row div-->
-      
-
     <hr>
-
 <?php $content = ob_get_clean(); ?>
-
 <?php require('template.php'); ?>

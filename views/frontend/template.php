@@ -47,14 +47,11 @@
     </nav>
 
     <!-- Page Header -->
-    
     <?=$header ?> 
     	<div class="container">
     		<?=$content?>    	
     	</div>
-
-
-
+      
     	<!-- Footer -->
     <footer>
       <div class="container">

@@ -2,7 +2,6 @@
 <?php ob_start(); ?>
 
  <div class="card mb-3">
-
         <div class="card-header">
           <i class="fa fa-table"></i> Liste des commentaires signalés</div>
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -34,17 +33,14 @@
                   <td><?= $data['comment_date_fr'] ?></td>
                   <td><a class="btn btn-primary" href="index.php?action=delComment&id=<?= $data['id_comment']?>">Moderé</a> <a class="btn btn-primary" href="index.php?action=adminRestorComment&id=<?= $data['id_comment']?>">Restauré</a></td>
                 </tr>
-
-                <?php } // fin de la boucle while
-                ?>
+    <?php 
+    } // fin de la boucle while
+    ?>
               </tbody>
             </table>
           </div>
         </div>
       </div>
-  
-    
-
     <?php $content = ob_get_clean(); ?>
 <?php
 require 'template_admin.php'; ?>
