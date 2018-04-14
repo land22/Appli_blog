@@ -39,7 +39,7 @@
               <a class="nav-link" href="index.php?action=contact">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.php?action=login">Connection</a>
+              <a class="nav-link" href="index.php?action=<?php if (isset($_SESSION['auth'])) {echo 'adminListPost';} else{ echo 'login';}?>"><?php if (isset($_SESSION['auth'])) {echo 'Administration';} else{ echo 'Connection';}?></a>
             </li>
           </ul>
         </div>

@@ -30,7 +30,7 @@
 		?>
                 <tr>
                   <td><?= htmlspecialchars($data['author_comment']) ?></td>
-                  <td class="cel_comment"><p width="100%"><?= htmlspecialchars($data['comment']) ?></p></td>
+                  <td style="word-break: break-word;"><?= htmlspecialchars($data['comment']) ?></td>
                   <td><?= $data['comment_date_fr'] ?></td>
                   <td><a class="btn btn-primary" href="index.php?action=delComment&id=<?= $data['id_comment']?>">Moderé</a> <a class="btn btn-primary" href="index.php?action=adminRestorComment&id=<?= $data['id_comment']?>">Restauré</a></td>
                 </tr>

@@ -1,7 +1,7 @@
 <?php ob_start(); ?>
  <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Data Table Example</div>
+          <i class="fa fa-table"></i>Liste des commentaires pour ce post</div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -29,7 +29,7 @@
     ?>
                 <tr>
                   <td><?= htmlspecialchars($data['author_comment']) ?></td>
-                  <td><?= htmlspecialchars($data['comment']) ?></td>
+                  <td style="word-break: break-word;"><?= htmlspecialchars($data['comment']) ?></td>
                   <td><?= htmlspecialchars($data['comment_date_fr']) ?></td>
                   <td><a href="index.php?action=delComment&id=<?=$data['id_comment'] ?>"><i class="fa fa-trash-o" style="font-size:28px"></i></a></td>
                 </tr>
