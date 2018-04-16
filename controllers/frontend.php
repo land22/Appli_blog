@@ -44,7 +44,7 @@ function Post()
 				exit;
 	}
 	$comments = $result->getComments($_GET['id']);
-	require(ABSOLUTE_PATH.'/views/frontend/PostView.php');
+	require(ABSOLUTE_PATH.'/views/frontend/postView.php');
 }
 /*
 *Action pour la page de contact
