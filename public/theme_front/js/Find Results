@@ -1,0 +1,27 @@
+Searching 256 files for "contact_me.php"
+
+C:\xampp\htdocs\appli_blog\public\theme_front\contact.html:
+   73          <div class="col-lg-8 col-md-10 mx-auto">
+   74            <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
+   75:           <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
+   76            <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
+   77            <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+
+C:\xampp\htdocs\appli_blog\public\theme_front\js\contact_me.js:
+   21        $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
+   22        $.ajax({
+   23:         url: "/public/theme_front/mail/contact_me.php",
+   24          type: "POST",
+   25          data: {
+
+C:\xampp\htdocs\appli_blog\public\theme_front\js\contact_me.min.js:
+    1: $(function(){$("#contactForm input,#contactForm textarea").jqBootstrapValidation({preventSubmit:!0,submitError:function(t,e,s){},submitSuccess:function(t,e){e.preventDefault();var s=$("input#name").val(),a=$("input#email").val(),n=$("input#phone").val(),c=$("textarea#message").val(),i=s;i.indexOf(" ")>=0&&(i=s.split(" ").slice(0,-1).join(" ")),$this=$("#sendMessageButton"),$this.prop("disabled",!0),$.ajax({url:"/public/theme_front/mail/contact_me.php",type:"POST",data:{name:s,phone:n,email:a,message:c},cache:!1,success:function(){$("#success").html("<div class='alert alert-success'>"),$("#success > .alert-success").html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>"),$("#success > .alert-success").append("<strong>Your message has been sent. </strong>"),$("#success > .alert-success").append("</div>"),$("#contactForm").trigger("reset")},error:function(){$("#success").html("<div class='alert alert-danger'>"),$("#success > .alert-danger").html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>"),$("#success > .alert-danger").append($("<strong>").text("Sorry "+i+", it seems that my mail server is not responding. Please try again later!")),$("#success > .alert-danger").append("</div>"),$("#contactForm").trigger("reset")},complete:function(){setTimeout(function(){$this.prop("disabled",!1)},1e3)}})},filter:function(){return $(this).is(":visible")}}),$('a[data-toggle="tab"]').click(function(t){t.preventDefault(),$(this).tab("show")})}),$("#name").focus(function(){$("#success").html("")});
+
+C:\xampp\htdocs\appli_blog\views\frontend\contactView.php:
+   43          <div class="col-lg-8 col-md-10 mx-auto">
+   44            <p>Voulez-vous entrer en contact? Remplissez le formulaire ci-dessous pour m'envoyer un message et je vous répondrai dans les plus brefs délais!</p>
+   45:           <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
+   46            <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
+   47            <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+
+4 matches across 4 files

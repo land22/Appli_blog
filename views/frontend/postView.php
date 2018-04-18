@@ -35,7 +35,7 @@
 		  <div class="post-preview">
 		    <p style="word-break: break-word;">
 		      <?= nl2br(htmlspecialchars($comment['comment'])) ?>
-        <a title="Signalé ce commentaire" href="index.php?action=signalComment&id=<?= $comment['id_comment'] ?>"><i class="fa fa-exclamation-circle" style="font-size:30px"></i></a>
+        <a title="Signalé ce commentaire" href="index.php?action=signalComment&id=<?= $comment['id_comment'] ?>&id_post=<?= $post['id_post'] ?>"><i class="fa fa-exclamation-circle" style="font-size:30px"></i></a>
 		    <p>
 		    <p class="post-meta">Commenté par
           <a href="#"><?= nl2br(htmlspecialchars($comment['author_comment'])) ?></a> Le <?= nl2br(htmlspecialchars($comment['comment_date_fr'])) ?></p>

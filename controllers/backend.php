@@ -7,21 +7,25 @@ function login()
 	require(ABSOLUTE_PATH.'/views/backend/loginView.php');
 }
 
+function checkLogin()
+{
+  if (!isset($_SESSION['auth']))
+  {
+    header('Location:index.php');
+  }
+}
+
  /*
  ** action pour lister les posts coté admin
  */
 function adminListPost()
 {
-  if (isset($_SESSION['auth']))
-  {
+    checkLogin();
     $post = new PostManager();
 		$listPosts = $post->getListPosts();
     require(ABSOLUTE_PATH.'/views/backend/viewPost.php');
-  }
-  else
-  {
-  header('Location:index.php');
-  }
+  
+
 }
 
 /*
@@ -29,8 +33,7 @@ function adminListPost()
 */
 function adminListComment()
 {  
-  if (isset($_SESSION['auth']))
-  {
+    checkLogin();
 	  $comment = new CommentManager();
 		if (isset($_GET['id']))
     {
@@ -41,11 +44,8 @@ function adminListComment()
       $listComments = $comment->ListComment();
 		}    	
 	  require(ABSOLUTE_PATH.'/views/backend/viewComment.php');
-	}
-  else
-  {
-    header('Location:index.php');
-  }	
+	
+  	
 }
 /*
 **action pour lister les commentaires moderer

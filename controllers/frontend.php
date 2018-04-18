@@ -68,13 +68,16 @@ function addComment()
 	else 
 	{
 		header('Location: index.php?action=post&id='.$_GET['id']);
+		exit;
 	}
 }
 function signalComment()
 {
 	$req = new CommentManager();
 	$req->ModerComment($_GET['id']);
-	header('Location:index.php?action=listPosts');
+	header('Location:index.php?action=post&id='.$_GET['id_post']);
+    exit;
+
 }
 
 		   
