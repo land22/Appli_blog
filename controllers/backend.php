@@ -52,25 +52,18 @@ function adminListComment()
 */
 function adminListCommentModer()
 {
-  if (isset($_SESSION['auth']))
-  {
+    checkLogin();
     $comment = new CommentManager();
     $listComments = $comment->ListCommentModer();
     require (ABSOLUTE_PATH.'/views/backend/viewCommentModer.php');
-  }
-  else
-  {
-    header('Location:index.php');
-  }
-
+  
 }
 /*
 **action pour restaurer un commentaire
 */
 function adminRestorComment()
 {
-  if (isset($_SESSION['auth']))
-  { 
+    checkLogin();
     if(isset($_GET['id']))
     {
     $comment = new CommentManager();
@@ -82,11 +75,6 @@ function adminRestorComment()
      header('Location:index.php?action=adminListPost'); 
     }
 
-  }
-  else
-  {
-    header('Location:index.php');
-  }
 }
 
 /*
@@ -94,14 +82,8 @@ function adminRestorComment()
 */		
 function formPost()
 { 
-  if (isset($_SESSION['auth'])) 
-  {
-	  require(ABSOLUTE_PATH.'/views/backend/formView.php');
-	}
-  else
-  {
-    header('Location:index.php');
-  }
+  checkLogin();
+	require(ABSOLUTE_PATH.'/views/backend/formView.php');	  
 }
 
 /*
@@ -109,16 +91,10 @@ function formPost()
 */
 function createPost()
 {
-  if (isset($_SESSION['auth']))
-  {
+    checkLogin();
     $post = new PostManager();
     $post->insertPost($_POST['titlePost'],$_POST['subTitle'],$_POST['contentPost']);
 	  header('Location:index.php?action=adminListPost');
-	}
-  else
-  {
-  header('Location:index.php');
-  }
 }
 
 /*
@@ -126,16 +102,11 @@ function createPost()
 */
 function formUpdatePost()
 { 
-  if (isset($_SESSION['auth'])) 
-  {
+    checkLogin();
     $post = new PostManager();
     $data = $post->getPost($_GET['id']);
     require(ABSOLUTE_PATH.'/views/backend/formViewUpdate.php');
-  }
-  else 
-  {
-    header('Location:index.php');
-  }
+  
 }
 
 /*
@@ -145,8 +116,7 @@ sinom cela ne fonctionne pas
 */
 function delPost()
 {
-  if (isset($_SESSION['auth'])) 
-  {
+    checkLogin();
 		$post = new PostManager();
 	  if (isset($_GET['id'])) 
     {
@@ -158,19 +128,14 @@ function delPost()
 	  }
 	$post->deletePost($_GET['id']);
 	header('Location:index.php?action=adminListPost');
-  }
-  else
-  {
-    header('Location:index.php');
-  }
+ 
 }
 /*
 **Action pour éditer un post
 */
 function upPost()
 {
-  if (isset($_SESSION['auth'])) 
-  {
+    checkLogin();
     $post = new PostManager();
     if (isset($_GET['id']))
     {
@@ -178,11 +143,7 @@ function upPost()
       $post->updatePost($_POST['id'], $_POST['titlePost'], $_POST['subTitle'], $_POST['contentPost']);
     }
     header('Location:index.php?action=adminListPost');
-  }
-  else 
-  {
-    header('Location:index.php');
-  }
+  
   
 }
 /*
@@ -190,8 +151,7 @@ function upPost()
 */
 function delComment()
 { 
-  if (isset($_SESSION['auth']))
-  {
+    checkLogin();
     $post = new PostManager();
   	if (isset($_GET['id']))
     {
@@ -202,11 +162,7 @@ function delComment()
       $post->deleteComment();
   	}
   	header('Location:index.php?action=adminListPost');
-  }
-  else
-  {
-  header('Location:index.php');
-  }
+  
 }
   /*
   Parti pour la gestion d'autentification
