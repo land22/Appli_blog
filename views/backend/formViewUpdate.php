@@ -11,7 +11,7 @@ $data['sub_title']?>">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Contenu</label>
-    <textarea name="contentPost" value="<?= $data['content_post']?>"></textarea>
+    <textarea name="contentPost" value="<?= $data['content_post']?>" ></textarea>
   </div>
     <button type="submit" class="btn btn-primary">Modifier</button>
     <input type="hidden" name="id" value="<?=$data['id_post']?>">

@@ -1,0 +1,11 @@
+Pour installer le projet:
+vous téléchargez tout le dossier appli_blog disponible ici https://github.com/land22/Appli_blog/;
+après vous déposez le dossier dans votre serveur web;
+vous créez votre base de données;
+vous importez le fichier blog_appli.sql qui se trouve dans le repertoire models;
+Ensuite editer le fichier Manager.php pour renseigner le nom d'hôte de la base de données,le nom de votre base de données,
+le nom utilisateur et le mot de passe;
+enfin vous lancez l'application en saisissant l'adresse de votre serveur web et par la suite le nom du dossier contenant les fichiers
+télécharger.
+
+ 
